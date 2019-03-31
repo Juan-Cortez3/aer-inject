@@ -22,8 +22,11 @@ Apart from that, you also need to add to your `pcie_ports=native` kernel command
 This statement will enable the native PCI-E services(including AER) associated with PCI-E ports
 unconditionally.
 
-if you enabled the aer inject kernel config, a aer_inject file shall exist in folder /dev with
+if you enabled the aer inject kernel config, a **aer_inject** file shall exist in folder **/dev** with
 which you could use to inject AER errors in software layer.
+
+**aer-inject** only works on PCI devices which support AER. You can always check it by looking for 
+**Advanced Error Reporting** in the **capabilities** section in the output of command `lspci -vvv`.
 
 ### Authors
 
@@ -36,12 +39,10 @@ mce-inject.
 > aer-inject is free software; you can redistribute it and/or modify
 > it under the terms of the GNU General Public License as published
 > by the Free Software Foundation; version 2.
-
 > aer-inject is distributed in the hope that it will be useful, but
 > WITHOUT ANY WARRANTY; without even the implied warranty of
 > MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
 > General Public License for more details.
-
 > You should find a copy of v2 of the GNU General Public License
 > somewhere on your Linux system; if not, write to the Free Software
 > Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307
