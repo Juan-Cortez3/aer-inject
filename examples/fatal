@@ -8,6 +8,6 @@
 # and/or not report header log words.
 #
 AER
-# PCI_ID [WWWW:]XX.YY.Z
+# PCI_ID [WWWW:]XX:YY.Z
 UNCOR_STATUS MALF_TLP
 HEADER_LOG 0 1 2 3
